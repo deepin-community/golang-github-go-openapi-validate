@@ -1,5 +1,87 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-go-openapi-validate (0.24.0-2) unstable; urgency=medium
 
-  * Initial release
+  * Disable network tests in short mode.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Guillem Jover <gjover@sipwise.com>  Thu, 19 Sep 2024 19:53:59 +0200
+
+golang-github-go-openapi-validate (0.24.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Update dependencies for new upstream release.
+  * Run wrap-and-sort -ast.
+  * Switch to Standards-Version 4.7.0 (no changes needed).
+  * Add myself to Uploaders.
+  * Update copyright years.
+  * Add Repository and Repository-Browse fields to debian/upstream/metadata.
+  * Change Section from devel to golang.
+
+ -- Guillem Jover <gjover@sipwise.com>  Wed, 18 Sep 2024 18:49:42 +0200
+
+golang-github-go-openapi-validate (0.21.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Drop now unused dependencies on golang-github-go-openapi-runtime-dev.
+  * Bump golang-github-go-openapi-strfmt-dev to 0.20.2, drop disabling test
+    patch now that the required versions are in Debian.
+  * Bump golang-github-go-openapi-swag-dev to 1:0.21.0.
+  * Update debian/watch file.
+  * Set Testsuite field to autopkgtest-pkg-go.
+
+ -- Guillem Jover <gjover@sipwise.com>  Fri, 11 Mar 2022 23:42:51 +0100
+
+golang-github-go-openapi-validate (0.20.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Version dependency on golang-github-go-openapi-errors-dev (>= 0.19.5~).
+    (Closes: #1000775, #1000776)
+
+ -- Guillem Jover <gjover@sipwise.com>  Mon, 29 Nov 2021 13:11:17 +0100
+
+golang-github-go-openapi-validate (0.20.3-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor ]
+  * Strip unusual field spacing from debian/control.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 10 to 13.
+  * Set debhelper-compat version in Build-Depends.
+  * Change priority extra to priority optional.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+
+  [ Guillem Jover ]
+  * New upstream release.
+  * Remove now unnecessary vendored openapi-runtime module.
+  * Update Go Team Maintainer address.
+  * Switch to Standards-Version 4.6.0 (no changes needed).
+  * Use dh-sequence-golang instead of dh-golang and --with=golang.
+  * Wrap and sort -at.
+  * Move license location on Debian systems into a Comment field.
+  * Set Rules-Requires-Root to no.
+  * Mark -dev package as Multi-Arch: foreign.
+  * Remove ${shlibs:Depends} from -dev Depends field.
+  * Update gbp configuration following Go Team new workflow.
+  * Update copyright claims.
+  * Update gitlab-ci.yml from its canonical source.
+  * Set build directory to _build.
+  * Fix debian/watch syntax.
+  * Switch to debian/watch format 4.
+  * Update dependencies for new upstream release.
+  * Add new .gitignore file.
+  * Add fixtures to DH_GOLANG_INSTALL_EXTRA.
+  * Disable a test case failing due to too low dependencies.
+  * Do not ignore the test suite results.
+
+ -- Guillem Jover <gjover@sipwise.com>  Thu, 25 Nov 2021 23:11:36 +0100
+
+golang-github-go-openapi-validate (0.0~git20160704.0.deaf2c9-1) unstable; urgency=medium
+
+  * Initial release (Closes: #857025)
+  * Vendor golang-github-go-openapi-runtime library to avoid
+    circular B-D loop.
+
+ -- Tim Potter <tpot@hpe.com>  Wed, 22 Feb 2017 08:15:43 +1100
