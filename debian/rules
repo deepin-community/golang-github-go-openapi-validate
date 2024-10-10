@@ -1,4 +1,11 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_INSTALL_EXTRA := \
+	fixtures \
+	# EOL
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --builddirectory=_build
+
+override_dh_auto_test:
+	dh_auto_test -- -short
